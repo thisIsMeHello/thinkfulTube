@@ -1,0 +1,20 @@
+body {
+  padding-top: 50px;
+  font-family: sans-serif;
+}
+
+figure{
+  display: inline-block;
+}
+
+figcaption{
+  text-align: center;
+}
+
+.returnedResult{
+  padding: 10px;
+}
+
+.thumbnail:hover{
+  box-shadow: 10px 5px 5px red;
+}
