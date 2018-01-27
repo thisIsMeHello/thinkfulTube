@@ -1,3 +1,3 @@
 # thinkfulTube
 
-Get thumnails from Youtube.
+Get thumbnails from Youtube.
