@@ -14,7 +14,7 @@ function getDataFromApi(searchTerm, callback) {
 
 function renderResult(result) {
   console.log(result);
-  $('.js-search-results').empty();
+  $('.js-thumbnailDiv').empty();
   for (let i=0; i<5; i++){
     let firstThumbnail = result.items[i].snippet.thumbnails.medium.url;
     let thumbID = result.items[i].id.videoId;
@@ -25,25 +25,25 @@ function renderResult(result) {
           <a class="thumbnail" href="https://youtube.com/watch?v=${thumbID}"><img src="${firstThumbnail}"></a>
             <figcapation>
               <a class="moreFrom" href="https://youtube.com/channel/${channelID}">More from ${channelTitle}</a>
-            </figcapation>  
+            </figcapation>
       </figure>
     `;
-    $('.js-search-results').append(thumbnailHtml);
+    $('.js-thumbnailDiv').append(thumbnailHtml);
   }
 }
 
 function renderButtons(){
-  $(".js-buttons").html(`
+  $(".js-buttonsDiv").html(`
       <button class="previousPage">previous page</button>
       <button class="nextPage">next page</button>
     `);
 }
 
-$('.js-buttons').on("click", ".nextPage", function(event){
+$('.js-buttonsDiv').on("click", ".nextPage", function(event){
   console.log("next button clicked");
 })
 
-$('.js-buttons').on("click", ".previousPage", function(event){
+$('.js-buttonsDiv').on("click", ".previousPage", function(event){
   console.log("previous button clicked");
 })
 
