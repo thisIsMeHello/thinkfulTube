@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  color: white;
+  background-color: black;
+}
+
+.header{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.youTubeImg{
+  display: inline-block;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.h1{
+  display: inline-block;
+  margin: 0px;
+  font-size: 100px;
+}
+
+.js-search-form{
+  padding-top: 20px;
+}
+
+figcaption{
+  display: block;
+  text-align: center;
+}
+
+.channelTitle{
+  padding-left: : 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.returnedResult{
+  display: flex;
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  flex-direction: column;
+  width: 320px;
+  margin: 0px 0px 16px 0px;
+}
+
+.returnedResult:hover{
+  border-color: red;
+  transition: border-color 0.3s;
+}
+
+.thumbnail:hover{
+  background: url ("images/download.png");
+}
+
+.moreFrom{
+  display: inline;
+  padding: 5px;
+  text-decoration: none;
+  background-color: rgba(255,255,255,.72);
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.moreFrom:hover{
+  color: black;
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+.flex{
+  display: flex;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.pl1{
+  padding-left: 8px;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.space-between{
+  justify-content: space-between;
+}
