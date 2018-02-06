@@ -1,7 +1,147 @@
-* {
+/* * {
   box-sizing: border-box;
+} */
+
+body{
+  padding: 10px;
+  background-color: black;
+  color: white;
+
 }
 
 .flex{
   display: flex;
+}
+
+.flexInline{
+  display: flexInline;
+}
+
+.headerAndSearch{
+
+}
+
+.imageAndHeader{
+  align-items: center;
+  outline: 1px solid;
+  outline-color: #036cdb;
+  box-shadow: 0 0 1rem;
+  padding-left: 5px;
+}
+
+.youTubeImg{
+  max-width: 100px;
+  max-height: 100px;
+  text-shadow: 0 0 40px #FF1177;
+}
+
+.h1{
+  font-size: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-shadow: 0 0 40px #FF1177;
+
+}
+
+.divider{
+  height: 20px;
+}
+
+.search-box{
+  align-items: center;
+  outline: 1px solid;
+  outline-color: #036cdb;
+  box-shadow: 0 0 1rem;
+  padding: 10px;
+  height: 40px;
+  display:inline;
+}
+
+.hidden{
+  display: none;
+}
+
+.icon{
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 2px;
+  color: grey;
+}
+
+input{
+  border: 1px solid;
+  border-color: #fca600;
+  border-radius: 3px;
+}
+
+input:hover{
+  transition: box-shadow .3s;
+  box-shadow: 0 0 40px #FF1177;
+}
+
+input:focus{
+  box-shadow: 0 0 40px #FF1177;
+}
+
+button{
+  border: 1px solid;
+  border-color: #fca600;
+  border-radius: 3px;
+  background-color: white;
+  color: grey;
+  margin-left: 10px;
+}
+
+button:hover{
+  transition: box-shadow .3s;
+  box-shadow: 0 0 40px #FF1177;
+}
+
+button:focus{
+  transition: box-shadow .3s;
+  box-shadow: 0 0 40px #FF1177;
+}
+
+.thumbnailDiv{
+  flex-wrap: wrap;
+}
+
+.returnedResult{
+
+  padding: 5px;
+  border: 1px solid;
+  border-color: #036cdb;
+  box-shadow: 0 0 1rem;
+}
+
+.returnedResult:hover{
+  transition: box-shadow .3s;
+  box-shadow: 0 0 40px #FF1177;
+}
+
+.grid{
+  @media screen and (min-width: 1500px){
+    width: 20%;
+    min-width: 20%;
+  }
+  @media screen and (max-width: 1499px, min-width: 1190px){
+    width: 25%;
+    min-width: 1190px;
+  }
+  @media screen and (max-width: 1190px, min-width: 1025px){
+    width: 33.3333333333%;
+    min-width: 33.333333333%;
+  }
+  @media screen and (max-width: 1024px, min-width: 768px){
+    width: 50%;
+    min-width: 50%;
+  }
+  @media screen and (max-width: 767px){
+    width: 100%;
+    min-width: 100%;
+  }
+
+  }
+
+  }
 }

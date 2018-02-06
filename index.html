@@ -9,29 +9,41 @@
           integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
           crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="main.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
       <main>
         <header class="header">
 
-          <div class="flex items-center">
-            <img class="youTubeImg" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Ficons.iconarchive.com%2Ficons%2Fmarcus-roberto%2Fgoogle-play%2F512%2FYouTube-icon.png&f=1">
-            <div class="h1 pl1">Get Videos</div>
+          <div class="headerAndSearch">
+            <div class="flex">
+              <div class="flex imageAndHeader">
+                <img class="youTubeImg" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Ficons.iconarchive.com%2Ficons%2Fmarcus-roberto%2Fgoogle-play%2F512%2FYouTube-icon.png&f=1">
+                <div class="h1">Get Videos</div>
+              </div>
+            </div>
           </div>
 
+            <div class="divider"></div>
 
-            <form action="#" class="js-search-form">
-              <label for="query"></label>
-              <input type="text" class="js-query">
-              <button type="submit">Search</button>
-            </form>
+            <div>
+              <form action="#" class="js-search-form search-box flex">
+                <label for="query"></label>
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input type="text" class="js-query" placeholder="       search...">
+                <button type="submit">search</button>
+              </form>
+            </div>
 
         </header>
 
-          <h2></h2>
-          <div class="js-thumbnailDiv thumbnailDiv flex flex-wrap space-between"></div>
-          <div class="js-buttonsDiv"></div>
+          <div>
+            <h2></h2>
+            <div class="js-thumbnailDiv thumbnailDiv flex"></div>
+            <div class="js-buttonsDiv"></div>
+          </div>
+
       </main>
       <script src="app.js"></script>
     </body>

@@ -21,7 +21,7 @@ function renderResult(result) {
     let channelID = result.items[i].snippet.channelId;
     let channelTitle = result.items[i].snippet.channelTitle;
     let thumbnailHtml = `
-      <figure class="returnedResult js-returnedResult">      
+      <figure class="grid returnedResult js-returnedResult">
         <div>
           <a class="thumbnail js-thumbnail" href="https://youtube.com/watch?v=${thumbID}"><img src="${firstThumbnail}"></a>
           <div class="channelTitle">${channelTitle}</div>
@@ -41,6 +41,16 @@ $('.js-thumbnailDiv').mouseover(function(){
   console.log("moused over");
   $('.js-thumbnail').attr('src', 'file:////home/dave/Nextcloud/Thinkful/projects/projectAJAX/images/download.png')
 });
+
+//Hide search icon on input, bring back on submit
+
+$('.js-query').on('input', function(){
+  $('.icon').addClass('hidden');
+})
+
+$('.js-search-form').on('submit', function(){
+  $('.icon').removeClass('hidden');
+})
 
 
 function renderButtons(){
