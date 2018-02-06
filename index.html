@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
@@ -13,36 +13,35 @@
         <link href="main.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-      <main>
-        <header class="header">
+      <main role="main">
+        <header role="banner" class="header">
 
-          <div class="headerAndSearch">
+          <section role="region" class="headerAndSearch">
             <div class="flex">
               <div class="flex imageAndHeader">
-                <img class="youTubeImg" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Ficons.iconarchive.com%2Ficons%2Fmarcus-roberto%2Fgoogle-play%2F512%2FYouTube-icon.png&f=1">
+                <img class="youTubeImg" alt="Youtube logo" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Ficons.iconarchive.com%2Ficons%2Fmarcus-roberto%2Fgoogle-play%2F512%2FYouTube-icon.png&f=1">
                 <div class="h1">Get Videos</div>
               </div>
             </div>
-          </div>
+          </section>
 
             <div class="divider"></div>
 
-            <div>
+            <section>
               <form action="#" class="js-search-form search-box flex">
-                <label for="query"></label>
+                <label for="query">input search here</label>
                 <span class="icon"><i class="fa fa-search"></i></span>
-                <input type="text" class="js-query" placeholder="       search...">
+                <input aria-label="video search input" type="text" class="js-query" placeholder="       search...">
                 <button type="submit">search</button>
               </form>
-            </div>
+            </section>
 
         </header>
 
-          <div>
-            <h2></h2>
+          <section class="thumbSection" role="region" aria-live="assertive" hidden>
             <div class="js-thumbnailDiv thumbnailDiv flex"></div>
             <div class="js-buttonsDiv"></div>
-          </div>
+          </section>
 
       </main>
       <script src="app.js"></script>

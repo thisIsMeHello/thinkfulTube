@@ -12,6 +12,8 @@ function getDataFromApi(searchTerm, callback) {
   $.getJSON(YOUTUBE_SEARCH_URL, query, callback);
 }
 
+
+
 function renderResult(result) {
   console.log(result);
   $('.js-thumbnailDiv').empty();
@@ -20,10 +22,12 @@ function renderResult(result) {
     let thumbID = result.items[i].id.videoId;
     let channelID = result.items[i].snippet.channelId;
     let channelTitle = result.items[i].snippet.channelTitle;
+    let channelDescription = result.items[i].snippet.description;
+    let thumbDescription = result.items[i].snippet.title
     let thumbnailHtml = `
       <figure class="grid returnedResult js-returnedResult">
         <div>
-          <a class="thumbnail js-thumbnail" href="https://youtube.com/watch?v=${thumbID}"><img src="${firstThumbnail}"></a>
+          <a alt="${thumbDescription}" class="thumbnail js-thumbnail" href="https://youtube.com/watch?v=${thumbID}"><img src="${firstThumbnail}" alt="${thumbDescription}"></a>
           <div class="channelTitle">${channelTitle}</div>
         </div>
 
@@ -32,15 +36,16 @@ function renderResult(result) {
         </div>
       </figure>
     `;
+    $('.js-thumbSection').prop('hidden', false);
     $('.js-thumbnailDiv').append(thumbnailHtml);
   }
 }
 
 
-$('.js-thumbnailDiv').mouseover(function(){
-  console.log("moused over");
-  $('.js-thumbnail').attr('src', 'file:////home/dave/Nextcloud/Thinkful/projects/projectAJAX/images/download.png')
-});
+// $('.js-thumbnailDiv').mouseover(function(){
+//   console.log("moused over");
+//   $('.js-thumbnail').attr('src', 'file:////home/dave/Nextcloud/Thinkful/projects/projectAJAX/images/download.png')
+// });
 
 //Hide search icon on input, bring back on submit
 
